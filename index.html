@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+  <style>
+    button {
+      width: 150px;
+      height: 80px;
+      color: blueviolet;
+      border: none;
+      background-color: transparent;
+      margin: 20px;
+      cursor: pointer;
+      font-size: 1.5em;
+    }
+    #one {
+      border: 3px solid blueviolet;
+      transition-duration: 0.3s;
+    }
+    #one:hover {
+      background-color: blueviolet;
+      color: #fff;
+    }
+    #two {
+      position: relative;
+    }
+    #two::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: blueviolet;
+      transition-duration: 0.3s;
+    }
+    #two::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      right: 0;
+      width: 0%;
+      height: 2px;
+      background-color: blueviolet;
+      transition-duration: 0.3s;
+    }
+    #two:hover::after,
+    #two:hover::before {
+      width: 100%
+    }
+  </style>
+</head>
+<body>
+  <button id='one'>
+    1 - hover
+  </button>
+  <button id="two">
+    2 - hover
+  </button>
+  <button id="three">
+    3 - hover
+  </button>
+</body>
+</html>
